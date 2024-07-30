@@ -38,4 +38,19 @@ class Day08Test extends AnyFunSuite{
         assert(Day08.part1(input) == 4)
     }
 
+    test("\"\" should return 4"){
+        val input = Seq[String]("\"\"")
+        assert(Day08.part2(input) == 4)
+    }
+
+    test("\"aaa\\\"aaa\" should return 6") {
+        val input = Seq[String]("\"aaa\\\"aaa\"")
+        assert(Day08.part2(input) == 16-10)
+    }
+
+    test("\"\", \"aaa\\\"aaa\" should return 10") {
+        val input = Seq[String]("\"\"", "\"aaa\\\"aaa\"")
+        assert(Day08.part2(input) == 10)
+    }
+
 }
