@@ -3,7 +3,6 @@ import java.util.regex.Pattern
 object Day08 :
 
   def part1(input: Seq[String]): Int = {
-    val regex: String = "\\x\\S\\S"
     val counts = input.map(s => s.length - escapedString(s).length)
     counts.sum
   }
