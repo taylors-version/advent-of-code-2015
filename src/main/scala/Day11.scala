@@ -1,11 +1,11 @@
 object Day11:
 
-  def part1(input: String): String = {
+  def password(input: String): String = {
     val potential = nextPotentialPassword(input)
     if(iolTest(potential) && doubleTest(potential) && sequentialTest(potential))
       potential
     else
-      part1(potential)
+      password(potential)
   }
 
   def iolTest(input: String): Boolean = !input.exists(c => c == 'i' || c == 'o' || c == 'l')
@@ -36,5 +36,7 @@ object Day11:
 
   def main(args: Array[String]): Unit = {
     val data = "vzbxkghb"
-    println(part1(data))
+    val part1 = password(data)
+    println(part1)
+    println(password(part1))
   }
