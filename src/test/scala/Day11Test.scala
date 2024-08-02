@@ -28,7 +28,7 @@ class Day11Test extends AnyFunSuite{
     }
 
     test("abcdefgh next potential is abcdffaa"){
-        assert(Day11.part1("abcdefgh").equals("abcdffaa"))
+        assert(Day11.password("abcdefgh").equals("abcdffaa"))
     }
 
 }
