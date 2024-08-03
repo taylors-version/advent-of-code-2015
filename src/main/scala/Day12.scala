@@ -16,7 +16,7 @@ object  Day12 :
         case JsObject(o) if !(o.values.toList contains JsString("red")) => o.values.map(count2).sum
         case _ => 0
     }
-    
+    1120
 
     def main(args: Array[String]): Unit = {
         val data = io.Source.fromResource("Day12.txt").mkString.trim
