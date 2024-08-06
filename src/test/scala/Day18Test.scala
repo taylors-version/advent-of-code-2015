@@ -16,4 +16,8 @@ class Day18Test extends AnyFunSuite{
         assert(Day18.part1(testBoard, 4) == 4)
     }
 
+    test("input should be 17") {
+        assert(Day18.part2(testBoard, 5) == 17)
+    }
+
 }
