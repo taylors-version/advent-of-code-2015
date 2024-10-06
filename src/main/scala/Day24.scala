@@ -15,16 +15,20 @@ object Day24:
       }
       sequences(1)
       }
-
   }
-
-
+  
   def part1(input: Seq[Long]): Long = {
     val ben = smallestGroup(input)
     ben.product
   }
 
+  def part2(input: Seq[Long]): Long = {
+    val ben = smallestGroup(input, 4)
+    ben.product
+  }
+
   def main(args: Array[String]): Unit = {
     val input = io.Source.fromResource("Day24.txt").getLines().toSeq.map(_.toLong)
-    println(part1(input))//11846773891
+    println(part1(input))
+    println(part2(input))
   }
